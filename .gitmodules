@@ -1,0 +1,9 @@
+[submodule "src/glog"]
+	path = src/glog
+	url = https://github.com/google/glog.git
+[submodule "src/grpc"]
+	path = src/grpc
+	url = https://github.com/grpc/grpc.git
+[submodule "src/rocksdb"]
+	path = src/rocksdb
+	url = git@github.com:facebook/rocksdb.git
