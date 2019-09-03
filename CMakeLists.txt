@@ -1,10 +1,11 @@
 # CMake minimum version
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required (VERSION 3.10.0)
 set(CMAKE_MACOSX_RPATH 1)
 # project info
-project(bitstor
+project(bitstor 
   VERSION 0.0.1
-  C CXX)
+  C 
+  CXX)
 
 # include header
 include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
