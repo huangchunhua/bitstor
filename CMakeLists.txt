@@ -2,9 +2,8 @@
 cmake_minimum_required(VERSION 3.0)
 set(CMAKE_MACOSX_RPATH 1)
 # project info
-
 project(store
-  VERSION 1.0.0.0
+  VERSION 0.0.1
   LANGUAGES CXX C ASM)
 
 # include header
