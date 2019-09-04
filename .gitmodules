@@ -4,3 +4,6 @@
 [submodule "src/grpc"]
 	path = src/grpc
 	url = https://github.com/grpc/grpc.git
+[submodule "src/rocksdb"]
+	path = src/rocksdb
+	url = https://github.com/facebook/rocksdb.git

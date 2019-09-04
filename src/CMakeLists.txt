@@ -5,3 +5,9 @@ add_definitions("-Wall -g")
 
 add_subdirectory(glog)
 add_subdirectory(grpc)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules/")
+if(NOT WITH_SYSTEM_ROCKSDB)
+  include(BuildRocksDB)
+  build_rocksdb()
+endif(NOT WITH_SYSTEM_ROCKSDB)
