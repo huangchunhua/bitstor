@@ -2,18 +2,12 @@
 git submodule update --init --recursive
 
 if test -e build; then
-    echo 'build dir already exists; rm -rf build'
-    rm -rf build
+    echo 'build dir already exists;'
+    make clean
+    make -j8
+else
+    mkdir build
+    cd build
+    cmake -DBOOST_J=$(nproc) $ARGS "$@" ..
+    make -j8
 fi
-
-if test -e product; then
-    echo 'product dir already exists; rm -rf output'
-    rm -rf product
-fi
-
-mkdir build
-cd build
-cmake -DBOOST_J=$(nproc) $ARGS "$@" ..
-
-make clean
-make -j8
